@@ -1,6 +1,6 @@
 # Disme
 
-Basic resume site built using emberjs.
+Basic resume site built using emberjs on top of a sinatra backend.
 
 ## Pronunciation
 "This me" or "Dismay". Unfortunately, I have a feeling posterity will decide

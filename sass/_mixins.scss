@@ -1,0 +1,10 @@
+@mixin active-nav-link($class) {
+    .page-#{$class} {
+        .nav {
+            .#{$class} > a{
+                color: white;
+                background-color: $linkColor;
+            }
+        }
+    }
+}
