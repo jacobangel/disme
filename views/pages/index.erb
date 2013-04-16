@@ -1,13 +1,35 @@
-  <script type="text/x-handlebars">
-    <h2>Welcome to Ember.js</h2>
+<!-- page layout -->
+<script type="text/x-handlebars">
+{{partial header}}
+{{partial nav}}
 
-    {{outlet}}
-  </script>
+<div class='container'>
+    <div class="span12">
+           {{outlet}}
+    </div>
+</div>
 
-  <script type="text/x-handlebars" data-template-name="index">
-    <ul>
-    {{#each item in model}}
-      <li>{{item}}</li>
-    {{/each}}
-    </ul>
-  </script>
+{{partial footer}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+ <h3>Hello!</h3>
+</script>
+
+<script type="text/x-handlebars" data-template-name="resume">
+  <h1>{{name}}</h1>
+  <h2>{{address}}</h2>
+  <h2>{{email}}</h2>
+  <h2>{{phone}}</h2>
+  <h3>Position</h3>
+  {{#each position in jobs}}
+    <div class='job'>
+      <p><strong>{{position.title}}</strong>, {{position.date}}</p>
+      <ul>
+      {{#each  item in position.bullets}}
+        <li>{{item}}</li>
+      {{/each}}
+      </ul>
+    </div>
+  {{/each}}
+</script>

@@ -1,0 +1,32 @@
+# Resume Document goes here.
+
+name: John Doe
+address:
+    125 4th Street, Apt 1B
+    Brooklyn, NY 11215
+phone: 777 555 3333
+email: john.doe@example.com
+education:
+    school: Example University
+    gpa: 4
+    degree: Executioner
+jobs:
+    - title: Lead Doer
+      date: Present
+      bullets:
+        - Cool guy
+        - Super cool stuff
+
+    - title: Doer
+      date: Present
+      bullets:
+        - Cool guy
+        - Super cool stuff
+
+    - title: Junior Doer
+      date: Present
+      bullets:
+        - Cool guy
+        - Super cool stuff
+
+

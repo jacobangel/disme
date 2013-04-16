@@ -3,7 +3,9 @@
 # Basically a super small app
 require 'bundler/setup'
 require 'sinatra'
-
+require 'sinatra/json'
+require 'multi_json'
+require 'yaml'
 
 set :public_folder, File.dirname(__FILE__) + '/public'
 set :views, ['views/partials', 'views/pages', 'views/layouts', 'views']
@@ -14,7 +16,15 @@ BASE_TITLE = "Disis.me"
 get '/' do
 	@title = "Jonathan Doe | #{BASE_TITLE}"
 	@body_class = "page-home"
+	@resume = YAML.load_file('data/resume.yaml')
+
 	erb :index
+end
+
+get '/resume.json' do
+	resume = YAML.load_file('data/resume.yaml')
+
+	json resume
 end
 
 # Helpers
