@@ -4,7 +4,16 @@ App.Router.map(function() {
   // put your routes here
   this.route('resume', {
     path: '/resume'
-  })
+  });
+
+  this.route('contact', {
+  	path: '/contact'
+  });
+
+  this.route('success', {
+    path: '/contact/success'
+  });
+    
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -24,3 +33,4 @@ var resume = App.Resume.create();
 jQuery.getJSON('/resume.json', function(data) {
     resume.setProperties(data);
 });
+

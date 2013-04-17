@@ -2,9 +2,13 @@
 <script type="text/x-handlebars">
 {{partial header}}
 <div class='container'>
-    <div class="span12">
-           {{outlet}}
-    </div>
+  <div class='row'>
+      <div class="span12">
+        <section class='main-content'>
+             {{outlet}}
+         </section>
+      </div>
+  </div>
 </div>
 
 {{partial footer}}
@@ -34,4 +38,52 @@
       </ul>
     </div>
   {{/each}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="contact">
+    <h1>Contact</h1>
+    <form method='POST' action='/contact' class='form-horizontal'>
+      <div class='control-group'>
+        <label class="control-label" for="inputEmail">Name</label>
+        <div class="controls">
+          <input type="text" id="name" placeholder="How are you called?">
+        </div>
+      </div>
+      <div class='control-group'>
+        <label class="control-label" for="email">Email</label>
+        <div class="controls">
+          <input type="text" id="email" placeholder="Email">
+        </div>
+      </div>
+      <div class='control-group'>
+        <label class="control-label" for="subject">Subject</label>
+        <div class="controls">
+          <input type="text" id="subject" placeholder="Make it punchy">
+        </div>
+      </div> 
+      <div class='control-group'>
+        <label class="control-label" for="inputEmail">Email</label>
+        <div class="controls">
+          <textarea id="body" placeholder="Your message"></textarea>
+        </div>
+      </div> 
+      <div class='control-group'>
+        <label class="control-label" for="subject">Type 'hoop' backwards please.</label>
+        <div class="controls">
+          <input type="text" id="secret_code" placeholder="Are you human?">
+        </div>
+      </div> 
+      <div class='control-group'>
+        <div class="controls">
+          <button type='submit' class='btn'>Email Me</button>
+        </div>
+      </div> 
+      </form>
+</script>
+
+<script type="text/x-handlebars" data-template-name="success">
+<div class='hero-unit'>
+  <h1>You did it!</h1>
+  <p>I'll try to get back to you as soon as I can.</p>
+</div>
 </script>
